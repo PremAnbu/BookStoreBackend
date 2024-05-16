@@ -13,12 +13,12 @@ namespace BusinessLayer.Service
     public class ShoppingCartServiceBL(IShoppingCartRL cartBL) : IShoppingCartBL    
     {
 
-        public List<Book> GetCartBooks(int userId)
+        public List<Object> GetCartBooks(int userId)
         {
             return cartBL.GetCartBooks(userId);
         }
 
-        public List<Book> AddToCart(ShoppingCartRequest cartRequest, int userId)
+        public List<Object> AddToCart(ShoppingCartRequest cartRequest, int userId)
         {
             return  cartBL.AddToCart(cartRequest, userId);
         }
