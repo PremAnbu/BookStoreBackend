@@ -10,8 +10,8 @@ namespace BusinessLayer.Interface
 {
     public interface IShoppingCartBL
     {
-        List<Book> GetCartBooks(int userId);
-        List<Book> AddToCart(ShoppingCartRequest cartRequest, int userId);
+        List<Object> GetCartBooks(int userId);
+        List<Object> AddToCart(ShoppingCartRequest cartRequest, int userId);
         ShoppingCartRequest UpdateQuantity(int userId, ShoppingCartRequest cartRequest);
         bool DeleteCart(int userId, int id);
     }

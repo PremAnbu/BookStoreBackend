@@ -12,19 +12,19 @@ namespace BookStoreBackend.Controllers
     public class ShoppingCartController(IShoppingCartBL cartBL) : Controller
     {
         [HttpGet("GetCartBooks")]
-        public ResponceStructure<List<Book>> GetCartBooks()
+        public ResponceStructure<List<Object>> GetCartBooks()
         {
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var cartBooks = cartBL.GetCartBooks(userId);
-            return new ResponceStructure<List<Book>>(true,"Retrieved books successfully",cartBooks );
+            return new ResponceStructure<List<Object>>(true,"Retrieved books successfully",cartBooks );
         }
 
         [HttpPost("AddToCart")]
-        public ResponceStructure<List<Book>> AddToCart([FromBody] ShoppingCartRequest cartRequest)
+        public ResponceStructure<List<Object>> AddToCart([FromBody] ShoppingCartRequest cartRequest)
         {
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var updatedCart =  cartBL.AddToCart(cartRequest, userId);
-            return new ResponceStructure<List<Book>>(true,"Added to cart successfully",updatedCart );
+            return new ResponceStructure<List<Object>>(true,"Added to cart successfully",updatedCart );
         }
 
         [HttpPut("UpdateQuantity")]

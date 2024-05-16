@@ -84,6 +84,8 @@ namespace BookStoreBackend.Controllers
                 {
                      new Claim(ClaimTypes.NameIdentifier, user.userId.ToString()),
                      new Claim(ClaimTypes.Email ,user.email),
+                     new Claim(ClaimTypes.Name, user.name),
+                     new Claim(ClaimTypes.MobilePhone,user.mobileNumber.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
