@@ -36,10 +36,10 @@ namespace BookStoreBackend.Controllers
         }
 
         [HttpDelete("DeleteCart")]
-        public ResponceStructure<bool> DeleteCart([FromBody] int id)
+        public ResponceStructure<bool> DeleteCart(int cartId)
         {
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-            var isDeleted =  cartBL.DeleteCart(userId, id);
+            var isDeleted =  cartBL.DeleteCart(userId, cartId);
             return new ResponceStructure<bool>(true,"Deleted from cart successfully", true);
         }
     }

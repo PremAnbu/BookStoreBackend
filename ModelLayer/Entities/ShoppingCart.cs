@@ -9,7 +9,7 @@ namespace ModelLayer.Entities
     public class ShoppingCart
     {
         public int cartId { get; set; }
-        public int quantity { get; set; }
+        public int bookQuantity { get; set; }
         public int userId { get; set; }
         public int bookId { get; set; }
     }

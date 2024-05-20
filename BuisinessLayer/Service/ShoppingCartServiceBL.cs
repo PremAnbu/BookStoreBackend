@@ -28,9 +28,9 @@ namespace BusinessLayer.Service
             return  cartBL.UpdateQuantity(userId, cartRequest);
         }
 
-        public bool DeleteCart(int userId, int id)
+        public bool DeleteCart(int userId, int cartId)
         {
-            return  cartBL.DeleteCart(userId, id);
+            return  cartBL.DeleteCart(userId, cartId);
         }
     }
 }

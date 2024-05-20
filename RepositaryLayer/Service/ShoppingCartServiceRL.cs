@@ -37,7 +37,7 @@ namespace RepositoryLayer.Service
                     var parameters = new DynamicParameters();
                     parameters.Add("@UserId", userId);
                     parameters.Add("@BookId", cartRequest.bookId);
-                    parameters.Add("@Quantity", cartRequest.quantity);
+                    parameters.Add("@Quantity", cartRequest.bookQuantity);
 
                     connection.Execute("spInsertCartItem", parameters, commandType: CommandType.StoredProcedure);
                 }
@@ -53,7 +53,7 @@ namespace RepositoryLayer.Service
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", userId);
                 parameters.Add("@BookId", cartRequest.bookId);
-                parameters.Add("@Quantity", cartRequest.quantity);
+                parameters.Add("@Quantity", cartRequest.bookQuantity);
 
                 connection.Execute("spUpdateCartItemQuantity", parameters, commandType: CommandType.StoredProcedure);
                 return cartRequest;
