@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.DTO.Request
 {
-    public class ShoppingCartRequest
+    public class OrderRequest
     {
-        public int bookQuantity { get; set; }
+        public DateTime orderDate { get; set; }
         public int bookId { get; set; }
     }
 }

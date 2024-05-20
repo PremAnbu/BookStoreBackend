@@ -13,6 +13,6 @@ namespace RepositoryLayer.Interface
         List<Object> GetCartBooks(int userId);
         List<Object> AddToCart(ShoppingCartRequest cartRequest, int userId);
         ShoppingCartRequest UpdateQuantity(int userId, ShoppingCartRequest cartRequest);
-        bool DeleteCart(int userId, int id);
+        bool DeleteCart(int userId, int cartId);
     }
 }

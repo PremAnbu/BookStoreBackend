@@ -8,8 +8,9 @@ namespace ModelLayer.Enums
 {
     public enum AddressType
     {
-        Home,
-        Work,
-        Other
+        Home = 1,
+        Office = 2,
+        Other = 3
     }
+
 }
