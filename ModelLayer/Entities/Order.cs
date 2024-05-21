@@ -10,6 +10,7 @@ namespace ModelLayer.Entities
     public class Order
     {
         public int orderId {  get; set; }
+        public int addressId {  get; set; }
         public int userId {  get; set; }
         public DateTime orderDate { get; set; }
         public int bookId {  get; set; }

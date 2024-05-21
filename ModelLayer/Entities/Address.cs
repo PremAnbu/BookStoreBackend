@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace ModelLayer.Entities
 {
     public class Address
-    {
-       
+    { 
         public int addressId { get; set; }
         public string name { get; set; }
         public long mobileNumber { get; set; }

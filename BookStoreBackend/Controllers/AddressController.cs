@@ -33,7 +33,7 @@ namespace BookStoreBackend.Controllers
         {
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var updatedCartRequest = addressBL.UpdateAddress(userId, addressRequest);
-            return new ResponceStructure<Address>(true, "Updated quantity successfully", updatedCartRequest);
+            return new ResponceStructure<Address>(true, "Updated address successfully", updatedCartRequest);
         }
         [HttpDelete("DeleteAddress")]
         public ResponceStructure<bool> DeleteAddress(int addressId)

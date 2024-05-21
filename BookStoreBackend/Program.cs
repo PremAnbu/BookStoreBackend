@@ -26,6 +26,8 @@ builder.Services.AddScoped<IAddressRL, AddressServiceRL>();
 builder.Services.AddScoped<IAddressBL, AddressServiceBL>();
 builder.Services.AddScoped<IOrderRL, OrderServiceRL>();
 builder.Services.AddScoped<IOrderBL, OrderServiceBL >();
+builder.Services.AddScoped<IWishListRL, WishListServiceRL>();
+builder.Services.AddScoped<IWishListBL, WishListServiceBL>();
 builder.Services.AddScoped<IShoppingCartRL, ShoppingCartServiceRL>();
 builder.Services.AddScoped<IShoppingCartBL, ShoppingCartServiceBL>();
 
