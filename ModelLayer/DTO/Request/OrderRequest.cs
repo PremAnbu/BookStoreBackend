@@ -8,6 +8,7 @@ namespace ModelLayer.DTO.Request
 {
     public class OrderRequest
     {
+        public int addressId {  get; set; }
         public DateTime orderDate { get; set; }
         public int bookId { get; set; }
     }

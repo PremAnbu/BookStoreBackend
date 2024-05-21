@@ -42,5 +42,6 @@ namespace BookStoreBackend.Controllers
             var isDeleted =  cartBL.DeleteCart(userId, cartId);
             return new ResponceStructure<bool>(true,"Deleted from cart successfully", true);
         }
+
     }
 }
