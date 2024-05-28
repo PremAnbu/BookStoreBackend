@@ -32,6 +32,7 @@ namespace BookStoreBackend.Controllers
         public ResponceStructure<Address> UpdateAddress([FromBody] Address addressRequest)
         {
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
             var updatedCartRequest = addressBL.UpdateAddress(userId, addressRequest);
             return new ResponceStructure<Address>(true, "Updated address successfully", updatedCartRequest);
         }

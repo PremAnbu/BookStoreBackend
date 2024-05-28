@@ -68,6 +68,7 @@ namespace RepositoryLayer.Service
                 parameters.Add("@userId", userId);
 
                 connection.Execute("spUpdateAddress", parameters, commandType: CommandType.StoredProcedure);
+                addressRequest.userId= userId;
                 return addressRequest;
             }
         }
